@@ -26,7 +26,7 @@ public class EmailService {
 
     public void sendMarketUpdateEmail(String recipient, List<StockData> stocks, ForexData forex) {
         Map<String, Object> variables = new HashMap<>();
-        variables.put("title", "Daily Market Insights");
+        variables.put("title", "Weekly Market Insights");
         variables.put("stocks", stocks);
         variables.put("forex", forex);
 
