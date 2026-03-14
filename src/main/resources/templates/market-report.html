@@ -87,6 +87,10 @@
                 <span class="label">1 Month Ago:</span>
                 <span class="value" th:text="${'$' + stock.pastOpen}">$0.00</span>
             </div>
+            <div class="price-row">
+                <span class="label">% Change:</span>
+                <span class="value" th:text="${stock.percentageDifference + '%'}">0.23%</span>
+            </div>
         </div>
 
         <div class="card" style="border-left-color: #34a853;">
@@ -98,7 +102,7 @@
         </div>
     </div>
     <div class="footer">
-        Sent via Centralized Email API • <span th:text="${#calendars.format(#calendars.createNow(), 'MMMM dd, yyyy')}">Date</span>
+        Powered by 4:Nodes • <span th:text="${#calendars.format(#calendars.createNow(), 'MMMM dd, yyyy')}">Date</span>
     </div>
 </div>
 </body>
