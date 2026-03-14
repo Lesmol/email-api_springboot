@@ -1,0 +1,30 @@
+### Send Market Update Email
+POST http://localhost:8080/api/v1/send-market-update?recipient=molemilesedi@gmail.com
+Content-Type: application/json
+
+{
+  "stocks": [
+    {
+      "symbol": "UBER",
+      "open": "75.40",
+      "pastOpen": "70.20",
+      "percentageDifference": "12.2"
+    },
+    {
+      "symbol": "GOOG",
+      "open": "170.10",
+      "pastOpen": "165.00",
+      "percentageDifference": "1.34"
+    },
+    {
+      "symbol": "NVDA",
+      "open": "135.50",
+      "pastOpen": "110.20",
+      "percentageDifference": "0.21"
+    }
+  ],
+  "forex": {
+    "ticker": "USDZAR",
+    "openingPrice": 18.45
+  }
+}
