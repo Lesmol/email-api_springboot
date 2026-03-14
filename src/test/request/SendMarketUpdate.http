@@ -1,5 +1,5 @@
 ### Send Market Update Email
-POST http://localhost:8080/api/v1/send-market-update?recipient=molemilesedi@gmail.com
+POST http://localhost:8080/api/v1/send-market-update
 Content-Type: application/json
 
 {
@@ -26,5 +26,8 @@ Content-Type: application/json
   "forex": {
     "ticker": "USDZAR",
     "openingPrice": 18.45
-  }
+  },
+  "recipients": [
+    "molemilesedi@gmail.com"
+  ]
 }
