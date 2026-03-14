@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.lvmp</groupId>
     <artifactId>email-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>email-api</name>
     <description>email-api</description>
     <url/>
