@@ -70,7 +70,7 @@ public class EmailService {
         String htmlBody = templateEngine.process(request.templateName(), context);
 
         SendEmailRequest sendEmailRequest = SendEmailRequest.builder()
-                .fromEmailAddress("lesedi@lvmolemi.com")
+                .fromEmailAddress("updates@lvmolemi.com")
                 .destination(d -> d.toAddresses(request.to()))
                 .content(c -> c.simple(m -> m
                         .subject(s -> s.data(request.subject()).charset("UTF-8"))
