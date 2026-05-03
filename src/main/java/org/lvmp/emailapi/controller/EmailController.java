@@ -1,6 +1,6 @@
 package org.lvmp.emailapi.controller;
 
-import org.lvmp.emailapi.dto.MarketUpdateRequest;
+import org.lvmp.emailapi.model.MarketUpdateRequest;
 import org.lvmp.emailapi.service.EmailService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +19,7 @@ public class EmailController {
 
     @PostMapping("/send-market-update")
     public ResponseEntity<Void> sendMarketUpdate(@RequestBody MarketUpdateRequest marketUpdate) {
-        return emailService.sendMarketUpdateEmail(marketUpdate.recipients(), marketUpdate.stocks(), marketUpdate.forex());
+        return emailService.sendMarketUpdateEmail(marketUpdate.getRecipients(), marketUpdate.getStocks(), marketUpdate.getForex());
     }
 
 }

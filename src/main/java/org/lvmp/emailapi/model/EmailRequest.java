@@ -1,4 +1,4 @@
-package org.lvmp.emailapi.dto;
+package org.lvmp.emailapi.model;
 
 import java.util.Map;
 
