@@ -35,7 +35,6 @@ public class EmailService {
         variables.put("stocks", stocks);
         variables.put("forex", forex);
 
-
         for (String recipient : recipients) {
             EmailRequest request = new EmailRequest(
                     recipient,
