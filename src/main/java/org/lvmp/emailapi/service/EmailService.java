@@ -1,5 +1,6 @@
 package org.lvmp.emailapi.service;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.lvmp.emailapi.excpetion.SendEmailException;
 import org.lvmp.emailapi.model.EmailRequest;
@@ -18,15 +19,10 @@ import java.util.Map;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class EmailService {
-
     private final SesV2Client sesClient;
     private final TemplateEngine templateEngine;
-
-    public EmailService(SesV2Client sesClient, TemplateEngine templateEngine) {
-        this.sesClient = sesClient;
-        this.templateEngine = templateEngine;
-    }
 
     public ResponseEntity<Void> sendMarketUpdateEmail(List<String> recipients, List<StockData> stocks, ForexData forex) {
         log.info("Sending market update email to: {}", recipients);
