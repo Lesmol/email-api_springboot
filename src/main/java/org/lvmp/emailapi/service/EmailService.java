@@ -32,21 +32,20 @@ public class EmailService {
         variables.put("forex", forex);
 
         for (String recipient : recipients) {
-            EmailRequest request = new EmailRequest(
-                    recipient,
-                    "📊 Market Update",
-                    "market-report",
-                    variables
-            );
+            EmailRequest request = EmailRequest.builder()
+                    .to(recipient)
+                    .subject("📊 Market Update")
+                    .templateName("market-report")
+                    .variables(variables)
+                    .build();
 
             try {
-            this.sendTemplateEmail(request);
+                this.sendTemplateEmail(request);
             } catch (SendEmailException e) {
                 log.error("Failed to send to {} : {}", recipient, e.getMessage());
             }
         }
 
-        log.info("Successfully sent email(s).");
         return ResponseEntity.ok().build();
     }
 
